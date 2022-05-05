@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiListViewTestRC1v172P4.MainPage">
+
+    <!--<ScrollView>-->
+        <VerticalStackLayout >
+            <Button 
+                Text="Click me"
+              FontAttributes="Bold"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="OnCounterClicked"
+                HorizontalOptions="Start" />
+            <Label 
+                Text="NUMBER OF OBJECTS: "
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="Medium"
+                HorizontalOptions="Start" 
+                x:Name="LabelCounter"/>
+            <ListView BackgroundColor="Yellow" 
+                x:Name="listView1">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell >
+                            <StackLayout VerticalOptions="Center" >
+                               <Label Text="{Binding ID, StringFormat= 'ID: {0}'}"
+                               FontAttributes="Bold"/>
+                                <!-- <Label Text="{Binding Name, StringFormat='NAME: {0}'}"/>-->
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <!--<CollectionView      
+                x:Name="listView1">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout VerticalOptions="Center">
+                            <Label Text="{Binding ID, StringFormat= 'ID: {0}'}"
+                               FontAttributes="Bold"/>
+                            <Label Text="{Binding Name, StringFormat='NAME: {0}'}"/>
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>-->
+            
+        </VerticalStackLayout>
+       
+    <!--</ScrollView>-->
+</ContentPage>
