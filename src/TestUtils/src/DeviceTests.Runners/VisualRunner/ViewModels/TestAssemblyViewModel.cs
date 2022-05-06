@@ -21,7 +21,7 @@ namespace Microsoft.Maui.TestUtils.DeviceTests.Runners.VisualRunner
 		TestState _result;
 		TestState _resultFilter;
 		RunStatus _runStatus;
-		string? _searchQuery;
+		string? _searchQuery = "ReAssigning ListView in VSL Crashes";
 
 		string? _detailText;
 		string? _displayName;
